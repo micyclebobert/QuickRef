@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <h2>Settings</h2>
+  <div id="container"></div>
+  <br>
+  <hr><br>
+  <label>
+    Work:
+    <select id="work">
+      <option value="Copy">Copy</option>
+      <option value="Download">Download</option>
+    </select>
+  </label>
+  <br>
+  <label>
+    Work Type:
+    <select id="workType">
+      <option value="Text">Text</option>
+      <option value="JSON">JSON</option>
+    </select>
+  </label>
+  <br>
+  <label>
+    Join With:
+    <textarea type="text" id="joinWith" placeholder='Use &lt;br&gt; for newline'></textarea>
+  </label>
+  <br>
+  <label>
+    <input type="checkbox" id="keepFormatting"> Keep Formatting
+  </label>
+  <br>
+  <label>
+    <input type="checkbox" id="convertLinks"> Convert Links
+  </label>
+  <br>
+  <label>
+    <input type="checkbox" id="includeStyleNames"> Include Style Names
+  </label>
+  <br><br>
+  
+  <button id="save">Save Settings</button>
+  <br>
+  <br>
+  <button id="sr">Save and Reload</button>
+</body>
+
+</html>

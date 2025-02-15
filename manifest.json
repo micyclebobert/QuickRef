@@ -1,0 +1,42 @@
+{
+  "name": "QuickRef",
+  "description": "One click to copy or download citations from Google Scholar",
+  "version": "1.0",
+  "manifest_version": 3,
+  "host_permissions": [
+    "https://scholar.google.com/scholar?*",
+    "https://scholar.googleusercontent.com/*"
+  ],
+  "permissions": [
+    "declarativeNetRequest",
+    "storage",
+    "tabs",
+    "scripting",
+    "clipboardRead",
+    "clipboardWrite"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://scholar.google.com/scholar?*"
+      ],
+      "js": [
+        "worker.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "16.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "16.png",
+    "32": "32.png",
+    "48": "48.png",
+    "128": "128.png"
+  }
+}
